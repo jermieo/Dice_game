@@ -99,19 +99,22 @@ btn.addEventListener('click', (val) => {
         let count_btn_1 = document.getElementById('count1')
         let num1 = parseInt(count_btn_1.innerText) 
         num1 += count
-        document.getElementById('count1').innerHTML = num1
-        if (num1 >= 30) {
-        let p4element = document.getElementById('p4');
+        if (num1 < 30) {
+            document.getElementById('count1').innerHTML = num1
+            document.getElementById("bt1").disabled = true;
+            document.getElementById("bt2").disabled = false;
+            document.getElementById("bt3").disabled = true;
+        } else if (num1 === 30) {
+            document.getElementById('count1').innerHTML = num1
+            let p4element = document.getElementById('p4');
             p4element.innerText = "Player One is Win The Game"
             document.getElementById("bt1").disabled = true;
             document.getElementById("bt2").disabled = true;
             document.getElementById("bt3").disabled = false;
         } else {
-            document.getElementById("bt1").disabled = true;
             document.getElementById("bt2").disabled = false;
-            document.getElementById("bt3").disabled = true;
+            document.getElementById("bt1").disabled = true;
         }
-        
 
     }
 })
@@ -168,9 +171,14 @@ bt2.addEventListener('click', (val) => {
         let count_btn_2 = document.getElementById('count2')
         let num = parseInt(count_btn_2.innerText)
         num += count
-        document.getElementById('count2').innerHTML = num;
-        if (num >= 30) {
-        let p4element = document.getElementById('p4');
+        if (num < 30) {
+            document.getElementById('count2').innerHTML = num;
+            document.getElementById("bt1").disabled = false;
+            document.getElementById("bt2").disabled = true;
+            document.getElementById("bt3").disabled = true;
+        } else if (num === 30) {
+            document.getElementById('count2').innerHTML = num
+            let p4element = document.getElementById('p4');
             p4element.innerText = "Player Two is Win The Game"
             document.getElementById("bt1").disabled = true;
             document.getElementById("bt2").disabled = true;
@@ -178,11 +186,8 @@ bt2.addEventListener('click', (val) => {
         } else {
             document.getElementById("bt1").disabled = false;
             document.getElementById("bt2").disabled = true;
-            document.getElementById("bt3").disabled = true;
-            
         }
-           
-       
+                  
     }
 })
 
