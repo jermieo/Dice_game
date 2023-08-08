@@ -45,7 +45,7 @@ img{
     width: 88px;
 }
 body{
-    background-color: cadetblue;
+    background-color: rgb(7, 10, 10);
 }
 .p2{
     margin-left: 24px;
@@ -73,4 +73,15 @@ body{
     height: 31px;
     background-color: red;
     border-radius: 10px;
+}
+
+.div1:hover{
+    background-color: blue;
+    transform: scale(1.10);
+    box-shadow: 0 0 40px -10px;
+}
+.div2:hover{
+    background-color: blue;
+    transform: scale(1.10);
+    box-shadow: 0 0 40px -10px;
 }
